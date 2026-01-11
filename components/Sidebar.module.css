@@ -1,0 +1,133 @@
+.sidebar {
+    height: 100%;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    z-index: 20;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    /* enforce constant non-scrollable sidebar */
+}
+
+/* ... keep responsive styles ... */
+@media (max-width: 1024px) {
+    .sidebar {
+        height: auto;
+        flex-direction: column;
+        padding: 2rem;
+    }
+}
+
+/* rest of existing styles remain same within this file logic, effectively just changing overflow */
+.avatarContainer {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    background: #2b2b2c;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.avatar {
+    border-radius: 16px;
+    object-fit: cover;
+    filter: grayscale(20%);
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-main);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.roleBadge {
+    background: #2b2b2c;
+    padding: 0.3rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border-color);
+    margin: 1.5rem 0;
+}
+
+.infoList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.iconBox {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2b2b2c 0%, #1e1e1f 100%);
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-primary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.infoContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.value {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 160px;
+}
+
+.socials {
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+    padding-top: 1.5rem;
+}
+
+.socialLink {
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+    color: var(--accent-primary);
+    transform: translateY(-2px);
+}

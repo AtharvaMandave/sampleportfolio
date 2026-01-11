@@ -1,66 +1,39 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import ScrollWrapper from '../components/ScrollWrapper';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className={styles.contentWrapper}>
+      <ScrollWrapper>
+        <div className={styles.pageHeader}>
+          <h2 className={styles.pageTitle}>About Me</h2>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <p className={styles.textBlock}>
+          I am a third-year <b>Computer Engineering student</b> at Vishwakarma Institute Of Information Technology, Pune. I have a strong foundation in data structures, algorithms, and machine learning.
+          <br /><br />
+          Currently acting as the <b>Co-Founder & CTO of EngiEdge Consulting LLP</b>, I lead technical vision and product strategy. My passion lies in solving real-world problems through data-driven solutions and building scalable web applications.
+        </p>
+
+        <h3 className={styles.serviceTitle} style={{ fontSize: '1.5rem', marginTop: '3rem' }}>What I Do</h3>
+        <div className={styles.serviceGrid}>
+          <div className={styles.serviceCard}>
+            <h4 className={styles.serviceTitle}>Web Development</h4>
+            <p className={styles.serviceDesc} style={{ color: '#d6d6d6' }}>Building modern, responsive web apps using React, Next.js, and Node.js.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <h4 className={styles.serviceTitle}>Data Science</h4>
+            <p className={styles.serviceDesc} style={{ color: '#d6d6d6' }}>Analyzing complex datasets to derive actionable insights using Python & Pandas.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <h4 className={styles.serviceTitle}>Machine Learning</h4>
+            <p className={styles.serviceDesc} style={{ color: '#d6d6d6' }}>Developing predictive models and image classifiers using TensorFlow & Scikit-learn.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <h4 className={styles.serviceTitle}>Technical Leadership</h4>
+            <p className={styles.serviceDesc} style={{ color: '#d6d6d6' }}>Leading teams, managing product lifecycles, and driving strategic growth.</p>
+          </div>
         </div>
-      </main>
+      </ScrollWrapper>
     </div>
   );
 }
